@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script type="text/javascript" src="namegenerator.js"></script> -->
+  <title>Band Name Generator</title>
+</head>
+<body>
+
+<!-- <script type="text/javascript" src="namegenerator.js"></script> -->
+
+  <button onclick="namegenerator()">Make a band!</button>
+
+  <h1 id="bandname">Band Name Generator</h1>
+
+  <script>
+    function namegenerator(list1, list2, list3){
+    name1 = [
+    "Diamond",
+    "Emerald",
+    "Ruby",
+    "Sapphire",
+    "Golden",
+    "Silver",
+    "Copper",
+    "Red",
+    "Blue",
+    "Silver",
+    "Crimson",
+    "Black",
+    "Royal",
+    "Regal",
+    "Green",
+    "White",
+    "Funky",
+    "Soul",
+    "Motor",
+    "Motor",
+    "Blue Water",
+    "Bay",
+    "River",
+    "Space",
+    "North",
+    "South",
+    "East",
+    "West",
+    "Highline",
+    "Lowlands",
+    "Midlands",
+    "Highlands",
+    "Prestigious",
+    "Pearl",
+    "Opal",
+    "Topaz",
+    "Sonic",
+    "Fearless",
+  ]
+
+    name2 = [
+      "Empire",
+      "Kings",
+      "Devils",
+      "Angels",
+      "Jesters",
+      "Titans",
+      "Lords",
+      "Barons",
+      "Demons",
+      "Dragons",
+      "Arrow",
+      "Heart",
+      "Spade",
+      "Club",
+      "Soul",
+      "Water",
+      "Sonic",
+      "Star",
+      "Magicans",
+      "Wizards",
+      "Spectres",
+      "",
+    ]
+
+    name3 = [
+      "Collective",
+      "Group",
+      "Band",
+      "Ensemble",
+      "Players",
+    ]
+
+    function getName(listOfNames) {
+      return listOfNames[Math.floor(Math.random() * listOfNames.length)]
+    }
+
+    function bandName(list1, list2, list3) {
+      return document.getElementById("bandname").innerHTML += `<br />The ${getName(list1)} ${getName(list2)} ${getName(list3)}`
+    }
+
+    bandName(name1, name2, name3)
+  }
+  </script>
+
+</body>
+</html>
